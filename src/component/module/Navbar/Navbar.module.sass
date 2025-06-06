@@ -1,19 +1,43 @@
-$mainColor:#000000
-$hoverColor:#FDBA74
+$mainColor: #000000
+$hoverColor: #FDBA74
 $textColor: #D1D5DB
-$mobileTextColor:#52525B
+$mobileTextColor: #52525B
+$darkBackGround: #27272a
+
+=resetBtn
+  background: none
+  border: none
+  cursor: pointer
+  outline: none
+
+.navbar_fixed main
+  position: fixed
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: $mainColor
+  opacity: 0.8
+
+.navbar_fixed
+  position: fixed
+  width: 90%
+  animation: fadeInDownBig 0.4s ease
+  left:0
+  top: 0
+  background: white
+  z-index: 999
 
 .navbarSection
-  position:fixed
+  position: fixed
   display: flex
   justify-content: space-between
   align-items: center
   padding: 1rem 2rem
-  margin:1.5rem 5rem
-  background-color:$mainColor
-  opacity:0.8
+  margin: 1.5rem 5rem
+  background-color: $mainColor
+  opacity: 0.8
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05)
-  border-radius:1rem
+  border-radius: 1rem
 
 .mobileMenu
   display: none
@@ -23,17 +47,14 @@ $mobileTextColor:#52525B
     width: 100%
     justify-content: space-between
     align-items: center
-    padding:0
-    margin:0
-    top:0
-    
+    padding: 0
+    margin: 0
+    top: 0
 
     button
-      background: none
-      border: none
+      +resetBtn
       color: $textColor
       font-size: 1.3rem
-      cursor: pointer
 
 .logo
   @media (max-width: 430px)
@@ -46,7 +67,7 @@ $mobileTextColor:#52525B
   flex-direction: column
   position: absolute
   top: -40%
-  height:100vh
+  height: 100vh
   right: 0
   background-color: #fff
   padding: 1rem
@@ -61,43 +82,39 @@ $mobileTextColor:#52525B
 
     &:hover
       color: $hoverColor
+
     &.active
       color: $hoverColor
 
 .dropDownTop
-  display:flex
-  justify-content:space-between
-  width:100%
+  display: flex
+  justify-content: space-between
+  width: 100%
 
   button
-    background: none
-    border: none
-    cursor: pointer
+    +resetBtn
     font-size: 0.8rem
-    color:$mobileTextColor
-    margin-right:9rem
-    text-align:center
-    
+    color: $mobileTextColor
+    margin-right: 9rem
+    text-align: center
+
 .imgTop
-  padding-top:0.5rem
+  padding-top: 0.5rem
 
 .dropDownBottom
   display: flex
   flex-direction: column
-  margin-top:2rem
-  border-top:1px solid $hoverColor
+  margin-top: 2rem
+  border-top: 1px solid $hoverColor
 
   button
     display: flex
     align-items: center
     gap: 0.5rem
+    +resetBtn
     padding: 0.6rem 1rem
-    background: none
-    border: none
     color: $hoverColor
     font-size: 0.9rem
-    cursor: pointer
-    outline: none  
 
     &:hover
       background-color: $hoverColor
@@ -105,6 +122,20 @@ $mobileTextColor:#52525B
 
     span
       font-size: 0.85rem
+
+.dropDownBtntheme
+  display: flex
+  align-items: center
+  color: $hoverColor
+  font-size: 0.9rem
+
+.dropDownBtnbasket
+  display: flex
+  align-items: center
+  color: $hoverColor !important
+  font-size: 0.9rem
+  padding: 0.6rem 1rem
+  gap: 0.5rem
 
 .navbarRight
   display: flex
@@ -132,7 +163,6 @@ $mobileTextColor:#52525B
   @media (max-width: 430px)
     display: none
 
-
 .navbarLeft
   display: flex
   align-items: center
@@ -144,34 +174,29 @@ $mobileTextColor:#52525B
 .navbarLeftIcon
   display: flex
   gap: 1rem
-  border-left:1px solid $hoverColor
-  padding-left:1.5rem
+  border-left: 1px solid $hoverColor
+  padding-left: 1.5rem
 
   button
-    background: none
-    border: none
-    cursor: pointer
+    +resetBtn
     font-size: 1.1rem
     color: $hoverColor
-    
 
 .navbarLeftBtn
-  display:flex
+  display: flex
+  color:$hoverColor
 
   button
-    display:flex
+    +resetBtn
+    display: flex
     align-items: center
-    color: $hoverColor
-    cursor: pointer
-    background: none
-    border: none
-    cursor: pointer
+    color: $hoverColor !important
 
   svg
     font-size: 1.1rem
 
   span
-    margin:0.6rem
+    margin: 0.6rem
     font-size: 0.8rem
 
   @media (max-width: 430px)
@@ -179,5 +204,7 @@ $mobileTextColor:#52525B
     justify-content: space-between
 
     span
-      display:none
+      display: none
 
+.dark
+  background: $darkBackGround

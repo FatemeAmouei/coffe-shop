@@ -1,6 +1,8 @@
 import "./globals.scss";
+import { ThemeProvider } from "@/context/ThemeContext";
+
 export const metadata = {
-  title: " Coffee Shop",
+  title: "Coffee Shop",
   icons: {
     icon: "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/36190/coffee-logo-clipart-md.png",
   },
@@ -14,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

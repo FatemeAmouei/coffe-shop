@@ -4,6 +4,8 @@ $scrollbar-bg: #fff;
 $scrollbar-thumb: #711d1c;
 $max-container-width: 1222px;
 $size__site_content_width: 1024px;
+$darkBackGround: #27272a;
+$lightBackGround: #f3f4f6;
 
 @font-face {
   font-family: $font-shabnam;
@@ -39,8 +41,12 @@ body {
 }
 
 body {
-  background: #fff;
+  background: $lightBackGround;
   position: relative;
+}
+
+html.dark {
+  background: $darkBackGround;
 }
 
 a {

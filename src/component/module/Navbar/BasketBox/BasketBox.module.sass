@@ -1,0 +1,122 @@
+$mainColor: #000000;
+$hoverColor: #FDBA74;
+$textColor: #3F3F46;
+$backgroundColorLight: #FFFFFF;
+$borderColorLight: #D1D5DB;
+$shadowColorLight: #FDBA74;
+$btnColorLight: #0D9488;
+
+$backgroundColorDark: #00000026;
+$borderColorDark: #3f3f46;
+$textColorDark: #FFFFFF;
+$hoverColorDark: #FDBA74;
+$shadowColorDark: #FDBA74;
+$darkBackGround: #27272a;
+$btnColordark: #10B981;
+
+
+.basketBox
+  position: absolute;
+  top: 80%;
+  right: 65%;
+  width: 280px;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 100;
+  font-family: "IRANSans", sans-serif;
+
+  &.dark 
+    background-color: $backgroundColorDark;
+    border: 1px solid $borderColorDark;
+    box-shadow: 0 -1px 0 0 $shadowColorDark;
+    color: $textColorDark;
+
+    .goToBasketBtn 
+      color: $hoverColorDark;
+      &:hover 
+        color: darken($hoverColorDark, 10%);
+      
+
+    .title, .price, .totalAmount 
+      color: $textColorDark;
+    
+    .checkoutBtn 
+      background-color: $btnColordark;
+      color: white;
+
+    .checkoutSection
+      border-top: 1px solid #FFFFFF1A
+
+  &.light 
+    background-color: $backgroundColorLight;
+    border: 1px solid $borderColorLight;
+    box-shadow: 0 -1px 0 $shadowColorLight;
+    color: $textColor;
+
+    .goToBasketBtn 
+      color: $hoverColor;
+      &:hover 
+        color: darken($hoverColor, 10%);
+      
+    .title, .price, .totalAmount 
+      color: $mainColor;
+  
+    .checkoutBtn 
+      background-color: $btnColorLight;
+      color: white;
+
+    .checkoutSection
+      border-top: 1px solid #D1D5DB
+      
+.goToBasketBtn
+  display: inline-flex
+  gap: 0.3rem
+  align-items: center
+  justify-content: flex-start
+  background: none
+  text-align: left
+  margin-bottom: 15px
+  text-decoration: none
+  font-size: 0.6rem
+  width: fit-content
+
+
+.imageText
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: 15px
+
+.Text
+  margin-right: 10px
+  text-align: right
+
+.title
+  font-size: 13px
+  margin-bottom: 2rem
+
+.price
+  font-size: 15px
+
+.checkoutSection
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 10px
+
+.totalAmount
+  margin: 0
+  font-size: 15px
+
+.checkoutBtn
+  border: none
+  padding: 10px 20px
+  border-radius: 10px
+  cursor: pointer
+  transition: background-color 0.3s ease
+  font-size: 12px
+
+
+
+
+
