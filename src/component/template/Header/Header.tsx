@@ -9,7 +9,7 @@ export default function Header() {
         alt="header"
         width={1599}
         height={700}
-      />{" "}
+      />
     </>
   );
 }
