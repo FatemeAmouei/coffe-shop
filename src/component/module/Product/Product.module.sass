@@ -1,0 +1,99 @@
+$textColorLight: #3F3F46;
+$btnColorLight: #9CA3AF;
+$priceColorLight: #0D9488;
+$starColor: #FACC15;
+
+$backgroundColorDark: #0000000D;
+$borderColorDark: #3f3f46;
+$textColorDark: #FFFFFF;
+$btnBackGrounddark: #27272a;
+$btnColordark: #9CA3AF;
+$priceColorDark:#10B981
+
+.productCard
+  width: 185px
+  padding: 20px
+  font-family: "IRANSans", sans-serif
+  border-radius: 16px
+  box-shadow: 4px 1px 4px 0 $backgroundColorDark
+  margin-bottom: 0.6rem
+  margin-right:1.5px
+
+  &.dark 
+    background-color: $backgroundColorDark;
+    border: 1px solid $borderColorDark;
+    color: $textColorDark;
+    
+    .title
+      color: $textColorDark;
+    
+    .price
+      color: $priceColorDark
+
+    .checkoutIcon 
+      color: $btnColordark
+      background-color: $btnBackGrounddark
+
+    .star
+      color: $starColor
+
+
+
+  &.light 
+    color: $textColorLight;
+      
+    .title
+      color: $textColorLight;
+  
+    .price
+      color: $priceColorLight
+
+    .checkoutIcon
+      color: $btnColorLight;
+
+    .star
+      color: $starColor
+
+
+.imageText
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+.Text
+  margin: 10px
+  text-align: right
+
+.title
+  font-size: 13px
+
+.price
+  font-size: 0.8rem
+  margin-top: 10px
+
+.checkoutSection
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 10px
+
+.checkoutIcons
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+.checkoutIcon
+  padding: 6px 6px 2px 6px
+  margin: 2px
+  border-radius:50%
+  cursor: pointer
+  font-size: 12px
+  align-items: center
+
+.star
+  margin: 0
+  font-size: 15px
+
+
+

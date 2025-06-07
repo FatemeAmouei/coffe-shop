@@ -1,0 +1,37 @@
+$textColorDark: #FFFFFF;
+$backgroundColorDark: #3F3F46;
+
+
+.SectionTitles
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width:90%
+  margin: 1rem 0rem
+  &.dark 
+    background-color: $backgroundColorDark
+
+    .title, .subTitle 
+      color: $textColorDark
+
+
+
+.titleRight
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  color:#3F3F46
+  margin-bottom: 2rem
+
+.title
+  font-size: 1.4rem
+
+.subTitle
+  font-size: 0.9rem
+
+.titleLeft
+  font-size: 0.6rem
+  color:#FDBA74
+  display: flex
+  align-items: center
+  gap: 0.3rem

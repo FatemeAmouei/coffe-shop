@@ -1,0 +1,71 @@
+$topBarDark:#00000099
+$topBarLight:#0000001A
+
+.section
+  width:100%
+  padding: 2rem
+
+.banner
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  width: 80%
+  overflow: hidden
+
+.bannerImg1 
+  object-fit: cover
+  z-index: 1
+  border-radius: 12px
+  margin:0 17rem 0 1rem
+
+.bannerImg2
+  object-fit: cover
+  z-index: 1
+  border-radius: 12px
+  margin:0 1.5rem
+
+
+.gradientOverlay1
+  position: absolute
+  top: 0
+  left: 0.6%
+  width: 33%
+  height: 100%
+  margin-left:2.9rem
+  border-radius: 12px
+  z-index: 2
+  background: linear-gradient(to left, $topBarDark, $topBarLight)
+
+.gradientOverlay2
+  position: absolute
+  top: 0
+  right: 26%
+  width: 33%
+  height: 100%
+  margin-left:2.9rem
+  border-radius: 12px
+  z-index: 2
+  background: linear-gradient(to left, $topBarDark, $topBarLight)
+
+.texts1
+  position: absolute
+  top: 35%
+  right: 64%
+  z-index: 1000
+
+
+.texts2
+  position: absolute
+  top: 35%
+  right: 28%
+  z-index: 1000
+  color:#fff
+
+.title
+  font-size: 20px
+
+
+.subTitle
+  font-size: 10px
+  padding-top: 0.8rem

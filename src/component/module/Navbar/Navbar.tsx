@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Navbar.module.sass";
@@ -17,6 +17,7 @@ interface NavLink {
 
 export default function Navbar() {
   const pathname = usePathname();
+  const basketBtnRef = useRef<HTMLButtonElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDarkMode } = useTheme();
   const [basketBox, setBasketBox] = useState(false);
@@ -63,7 +64,7 @@ export default function Navbar() {
             />
           </div>
 
-          <button>
+          <button ref={basketBtnRef} onClick={() => setBasketBox(true)}>
             <SlBasketLoaded size={24} />
           </button>
         </div>
@@ -142,7 +143,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {basketBox && (
+      {basketBox && basketBtnRef.current && (
         <BasketBox
           basketBox={basketBox}
           onClose={() => setBasketBox(false)}
