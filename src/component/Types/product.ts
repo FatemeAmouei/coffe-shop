@@ -15,3 +15,9 @@ export interface ArticleTypes {
   title: string;
   date: string;
 }
+
+export interface TypographyTypes {
+  image: string;
+  title: string;
+  desc: string;
+}

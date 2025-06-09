@@ -4,6 +4,7 @@ import styles from "./TelOrder.module.sass";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
 import { BsTelephone } from "react-icons/bs";
+import Link from "next/link";
 
 interface TelOrderProps {
   className?: string;
@@ -36,10 +37,12 @@ const TelOrder: React.FC<TelOrderProps> = ({ className }) => {
             امتحان کنند. فضای داخلی شیک و کارکنان خوش برخورد ما روز شما را می
             سازد!
           </p>
-          <button className={styles.btn}>
-            <BsTelephone style={{ marginLeft: "0.5rem" }} />
-            ثبت سفارش تلفنی
-          </button>
+          <Link href="/telOrder">
+            <button className={styles.btn}>
+              <BsTelephone style={{ marginLeft: "0.5rem" }} />
+              ثبت سفارش تلفنی
+            </button>
+          </Link>
         </div>
       </div>
     </div>

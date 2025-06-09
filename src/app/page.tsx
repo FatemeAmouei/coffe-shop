@@ -6,6 +6,8 @@ import GroupProductSection from "@/component/template/GroupProductSection/GroupP
 import BestSellerSection from "@/component/template/BestSeller/BestSellerSection";
 import ArticleSection from "@/component/template/ArticleSection/ArticleSection";
 import TelOrderSection from "@/component/template/TelOrderSection/TelOrderSection";
+import TypographySection from "@/component/template/TypographySection/TypographySection";
+import Footer from "@/component/module/Footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <BestSellerSection />
       <ArticleSection />
       <TelOrderSection />
+      <TypographySection />
+      <Footer />
     </>
   );
 }
