@@ -6,8 +6,9 @@ import { useTheme } from "@/context/ThemeContext";
 
 interface PropsTypes {
   title: string;
-  subTitle: string;
-  titleLeft: string;
+  subTitle?: string;
+  titleLeft?: string;
+  icon?: React.ReactNode;
 }
 
 export default function SectionTitles(props: PropsTypes) {
@@ -25,8 +26,13 @@ export default function SectionTitles(props: PropsTypes) {
           <p className={styles.subTitle}>{props.subTitle}</p>
         </div>
         <Link href="/product" className={styles.titleLeft}>
-          {props.titleLeft} <IoIosArrowBack />
+          {props.titleLeft && (
+            <div className={styles.titleLeft}>
+              {props.titleLeft} <IoIosArrowBack />
+            </div>
+          )}
         </Link>
+        {props.icon && <div className={styles.iconWrapper}>{props.icon}</div>}
       </div>
     </>
   );

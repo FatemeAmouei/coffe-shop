@@ -1,25 +1,27 @@
+$textColorLight: #3F3F46;
 $backgroundColorLight: #FFFFFF;
+
 $backgroundColorDark: #3F3F46;
 $textColorDark: #FFFFFF;
 
 .Section
   width:100%
-  padding-right: 5rem
+  padding-right: 2rem
 
   &.dark 
     background-color: $backgroundColorDark
+    .texts
+      color: $textColorDark
+
 
   &.light 
     background-color: $backgroundColorLight
 
-.ProductSection
-  width:70%
+    .texts
+      color: $textColorLight
+
+.TelOrderSection
+  width:90%
   padding: 1rem 5rem 0
 
-.Products
-  display: flex
-  margin:0 1rem 
-  justify-content: space-around
-  flex-wrap: wrap
-  width: 90%
-  margin: 0 15rem
+

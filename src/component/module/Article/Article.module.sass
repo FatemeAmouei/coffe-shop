@@ -1,0 +1,63 @@
+$titleColorLight: #3F3F46;
+$dateColor: #0D9488;
+
+$backgroundColorDark: #0000000D;
+$borderColorDark: #3f3f46;
+$titleColorDark: #FFFFFF;
+$dateColorDark:#10B981
+
+.ArticleCard
+  width: 190px
+  padding: 10px 5px
+  font-family: "IRANSans", sans-serif
+  border-radius: 16px
+  box-shadow: 4px 1px 4px 0 $backgroundColorDark
+  margin:0 0 0.5rem 0.5rem
+
+  &.dark 
+    background-color: $backgroundColorDark;
+    border: 1px solid $borderColorDark;
+    
+    .title
+      color: $titleColorDark;
+    
+    .date
+      color: $dateColorDark
+
+
+  &.light 
+     
+    .title
+      color: $titleColorLight;
+  
+    .date
+      color: $dateColor
+
+
+.img
+  width:100%
+  border-radius:10px
+
+.Text
+  display: flex
+  justify-content: space-between
+  align-items: center
+  text-align: right
+
+
+.title
+  font-size: 11px
+  margin: 5px 0px 5px 10px
+  line-height: 20px
+
+
+.date
+  margin: 0
+  font-size: 10px
+  flex:1
+  padding-left: 5px
+  line-height: 15px
+
+
+
+
