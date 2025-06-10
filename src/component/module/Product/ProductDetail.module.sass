@@ -1,0 +1,55 @@
+$backgroundColorLight: #FFFFFF;
+$backgroundColorDark: #3F3F46;
+$textColorDark: #FFFFFF;
+$textColorLight: #3F3F46;
+$starColor: #FACC15;
+
+.ProductSection
+  width:100%
+  height:90vh
+  &.dark 
+    background-color: $backgroundColorDark
+    color:$textColorDark
+    .ProductDetailStarP
+      color:$textColorDark
+
+  &.light 
+    color:$textColorLight
+    background-color: $backgroundColorLight
+    .ProductDetailStarP
+      color:$textColorLight
+
+.ProductDetail
+  display: flex
+  justify-content: space-around
+  flex-: wrap
+  padding: 10rem 5rem
+
+
+.ProductDetailLeft
+  width: 50%
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  padding: 2rem 0
+
+.ProductDetailText
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+
+.ProductDetailTitle
+  font-size: 1rem
+  line-height:5rem
+
+
+.ProductDetailPrice
+  line-height:3rem
+
+.ProductDetailStar
+  display: flex
+  justify-content: flex-start
+  gap: 0.3rem
+  color:$starColor
+

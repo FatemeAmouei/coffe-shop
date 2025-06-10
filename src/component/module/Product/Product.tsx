@@ -9,18 +9,40 @@ import { SlBasketLoaded } from "react-icons/sl";
 import { BsArrowLeftRight } from "react-icons/bs";
 import { MdOutlineStarPurple500, MdOutlineStarOutline } from "react-icons/md";
 import { ProductTypes } from "@/component/Types/product";
+import { useRouter } from "next/navigation";
 
-const Product: React.FC<ProductTypes> = ({ image, title, price, rating }) => {
+const Product: React.FC<ProductTypes> = ({
+  id,
+  image,
+  title,
+  price,
+  rating,
+}) => {
   const { isDarkMode } = useTheme();
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    router.push(`/product/${id}`);
+  };
+
+  const handleBasketClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    router.push("/basket");
+  };
 
   return (
     <div
       className={`${styles.productCard} ${
         isDarkMode ? styles.dark : styles.light
       }`}
+      onClick={handleCardClick}
     >
       <div className={styles.imageText}>
-        <Image src={image} alt="سبد خرید" width={100} height={100} />
+        {image && image !== "" ? (
+          <Image src={image} alt="سبد خرید" width={100} height={100} />
+        ) : (
+          <div className={styles.placeholderImage}>عکسی موجود نیست</div>
+        )}
         <div className={styles.Text}>
           <p className={styles.title}>{title}</p>
           <p className={styles.price}>
@@ -30,7 +52,11 @@ const Product: React.FC<ProductTypes> = ({ image, title, price, rating }) => {
       </div>
       <div className={styles.checkoutSection}>
         <div className={styles.checkoutIcons}>
-          <Link href="/basket" className={styles.checkoutIcon}>
+          <Link
+            href="/basket"
+            className={styles.checkoutIcon}
+            onClick={handleBasketClick}
+          >
             <SlBasketLoaded />
           </Link>
           <Link href="/basket" className={styles.checkoutIcon}>
